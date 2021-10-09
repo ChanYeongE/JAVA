@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="target" href="./demo1.html">ot</a>
+<script>
+    //현재 웹페이지가 http://localhost/webjs/Element/attribute_api/demo3.html 일 때 
+    var target = document.getElementById('target');
+    // http://localhost/webjs/Element/attribute_api/demo1.html 
+    console.log('target.href', target.href);
+    // ./demo1.html 
+    console.log('target.getAttribute("href")', target.getAttribute("href"));
+</script>
+</body>
+</html>
