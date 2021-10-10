@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="t1" href="./main.do">opentutorials</a>
+    <input id="t2" type="checkbox" checked="checked" />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        // 현재 문서의 URL이 아래와 같다고 했을 때
+        // https://www.dju.ac.kr/dju/main.do
+        var t1 = $('#t1');
+        console.log(t1.attr('href')); // ./demo.html 
+        console.log(t1.prop('href')); // https://www.dju.ac.kr/dju/main.do
+        
+        var t2 = $('#t2');
+        console.log(t2.attr('checked')); // checked
+        console.log(t2.prop('checked')); // true
+    </script>
+</body>
+</html>
+
+<!-- DOM과 마찬가지로 jQuery도 속성(attribute)과 프로퍼티를 구분한다. 속성은 attr, 프로퍼티는 prop 메소드를 사용한다. -->
