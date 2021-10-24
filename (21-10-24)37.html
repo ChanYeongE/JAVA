@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- innerHtml, outerHTML과 다르게 이 API들은 값을 읽을 때는 HTML 코드를 제외한 문자열을 리턴함 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="target">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <input type="button" onclick="get();" value="get" />
+    <input type="button" onclick="set();" value="set" />
+    <script>
+        function get(){
+            var target = document.getElementById('target');
+            alert(target.innerText);
+        }
+        function set(){
+            var target = document.getElementById('target');
+            target.innerText = "<li>JavaScript Core</li><li>BOM</li><li>DOM</li>";
+        }
+    </script>
+</body>
+</html>
+
+<!-- insertAdjacentHTML() 좀 더 정교하게 문자열을 이용해서 노드를 변경할 경우
+<ul id="target">
+    <li>CSS</li>
+</ul>
+<input type="button" onclick="beforebegin();" value="beforebegin" />
+<input type="button" onclick="afterbegin();" value="afterbegin" />
+<input type="button" onclick="beforeend();" value="beforeend" />
+<input type="button" onclick="afterend();" value="afterend" />
+<script>
+    function beforebegin(){
+        var target = document.getElementById('target');
+        target.insertAdjacentHTML('beforebegin','<h1>Client Side</h1>');
+    }
+    function afterbegin(){
+        var target = document.getElementById('target');
+        target.insertAdjacentHTML('afterbegin','<li>HTML</li>');
+    }
+    function beforeend(){
+        var target = document.getElementById('target');
+        target.insertAdjacentHTML('beforeend','<li>JavaScript</li>');
+    }
+    function afterend(){
+        var target = document.getElementById('target');
+        target.insertAdjacentHTML('afterend','<h1>Server Side</h1>');
+    }
+</script> -->
