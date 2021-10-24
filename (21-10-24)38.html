@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="target1"><span>Hello world</span></p>
+<p id="target2">
+    <span>Hello world</span>
+</p>
+<script>
+var t1 = document.getElementById('target1').firstChild;
+var t2 = document.getElementById('target2').firstChild;
+ 
+console.log(t1.firstChild.nodeValue);
+try{
+    console.log(t2.firstChild.nodeValue);   
+} catch(e){
+    console.log(e);
+}
+console.log(t2.nextSibling.firstChild.nodeValue);
+ 
+</script>
+</body>
+</html>
