@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="target" action="result.html">
+        <label for="name">name</label> <input id="name" type="name" />
+        <input type="submit" />
+    </form>
+    <script>
+    var t = document.getElementById('target');
+    t.addEventListener('submit', function(event){
+        if(document.getElementById('name').value.length === 0){
+            alert('Name 값이 누락 되었습니다');
+            event.preventDefault();
+        }
+    });
+    </script>
+</body>
+</html>
+<!-- 폼의 정보를 서버로 전송하는 명령인 submit시 -->
